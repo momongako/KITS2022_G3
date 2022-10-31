@@ -1,0 +1,41 @@
+/* Common */
+
+main {
+  padding: 30px 20px 0px 20px;
+  max-width: 935px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 735px) {
+  main {
+    padding: 0;
+  }
+}
+
+
+
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 735px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+
+.verfied-icon {
+  display: inline-block;
+  background-image: url("../img/icons.png");
+  background-position: -194px -351px;
+  background-size: 440px 411px;
+  width: 18px;
+  height: 18px;
+}

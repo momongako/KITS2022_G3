@@ -1,0 +1,38 @@
+package com.example.projectemarketg3.controller;
+
+import com.example.projectemarketg3.request.LoginRequest;
+import com.example.projectemarketg3.request.RegisterUserRequest;
+import com.example.projectemarketg3.request.UserRequest;
+import com.example.projectemarketg3.service.AuthService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
+
+@RestController
+@RequestMapping("/api/auth")
+public class AuthController {
+
+    @Autowired
+    private AuthService authService;
+
+    @PostMapping("/login")
+    public UserRequest login(@RequestBody LoginRequest request, HttpSession session) {
+        return authService.login(request, session);
+    }
+
+    @GetMapping("/logout")
+    public String login(HttpSession session) {
+        return authService.logout(session);
+    }
+
+    @PostMapping("/register")
+    public String register(@RequestBody RegisterUserRequest request) {
+        return authService.register(request);
+    }
+
+    @GetMapping("/confirm")
+    public String confirm(@RequestParam("token") String token) {
+        return authService.confirmToken(token);
+    }
+}
