@@ -281,7 +281,7 @@ const DetailProduct = () => {
 
                             <div className="be-comment">
                                 <div className="be-img-comment">
-                                    <a href="blog-detail-2.html">
+                                    <a href="#">
                                         <img src={item.user.image} alt=""
                                             className="be-ava-comment" />
                                     </a>
