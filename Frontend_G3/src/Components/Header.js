@@ -139,11 +139,7 @@ const Header = ({ isUser, onLogout }) => {
                                         categories.map((item, index) => {
 
                                             return (
-                                                <>
-
-                                                    <li key={index + 1}><Link to={"/shop/" + item.name}>{item.name}</Link></li>
-
-                                                </>
+                                                <li key={index + 1}><Link to={"/shop/" + item.name}>{item.name}</Link></li>
                                             )
 
                                         })
